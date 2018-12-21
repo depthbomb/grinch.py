@@ -8,7 +8,8 @@ This works by reading new messages and searching for the gift URLs within them. 
 
 ## Installation
 
-* Required Python 3.4 or higher, according to Discord.py's documentation. This was developed and tested on 3.7.1 and works fine. Your results may vary.
+* Requires Python 3.4 or higher, according to Discord.py's documentation. This was developed and tested on 3.7.1 and works fine. Your results may vary.
+  * Also requires pip
 * Extract the files (`app.py`, `config.json`, and `requirements.txt`) to a folder of your choice.
 * Open a command line tool and `cd` into the folder and then run `pip install -r requirements.txt`
 * After the required packages are installed, add your client token to `config.json`
