@@ -2,9 +2,11 @@
 
 Proof of concept Python script for "obtaining" Discord Nitro gift URLs from all servers you are in as they are sent.
 
-This works by reading new messages and searching for the gift URLs within them. If one is detected, it opens it in your computer's default browser for redeeming.
-
 **THIS IS JUST A PROOF OF CONCEPT!** Discord forbids the use of selfbots and doing so can get your account terminated. If you do choose to use this, I claim no responsibility for whatever happens to your account.
+
+## How it works
+
+This works by reading new messages and searching for the gift URLs within them. If one is detected, it opens it in your computer's default browser for redeeming.
 
 ## Installation
 
