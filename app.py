@@ -40,10 +40,11 @@ def log(type, message):
 
 	return print(f"{timestamp} {log}")
 
-with open("./config.json") as file:
+with open("config.json") as file:
 	config = json.load(file)
 
 client = discord.Client()
+urls = []
 
 @client.event
 async def on_ready():
@@ -55,9 +56,13 @@ async def on_message(msg):
 		url_regex = r"((?:https?:\/\/)discord\.gift\/[a-zA-Z0-9]{16,}|(?:https?:\/\/)discordapp\.com\/gifts?\/[a-zA-Z0-9]{16,})"
 		message = msg.content
 		url = re.search(url_regex, message).group(0)
-		log("success", f"Detected a gift url! Opening in browser... [ {url} ]")
-		webbrowser.open(url, new=2, autoraise=True)
+		if url not in urls:
+			log("success", f"Detected a gift url! Opening in browser... [ {url} ]")
+			webbrowser.open(url, new=2, autoraise=True)
+			urls.append(url)
+		else:
+			log("warn", f"Detected a duplicate gift url, ignoring. [ {url} ]")
 	except AttributeError:
-		pass
+		print(urls)
 
 client.run(config["token"])

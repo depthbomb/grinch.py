@@ -1,8 +1,6 @@
 # grinch.py
 
-Proof of concept Python script for obtaining Discord Nitro gift URLs from all servers it operates within as they are sent.
-
-**THIS IS JUST A PROOF OF CONCEPT!** Discord forbids the use of selfbots and doing so can get your account terminated. I highly recommend you do not use this.
+Proof of concept Python script for obtaining Discord gift URLs from all servers it operates within as they are sent.
 
 ## How it works
 
@@ -18,3 +16,7 @@ This works by reading new messages and searching for the gift URLs within them. 
 * Run the script by running `python app.py` in your command line tool (while still `cd`'d into the same folder)
 * ???
 * PROFIT!!
+
+## Will I get in trouble for using this?
+
+It depends on how you use it. This does not use any exploits and uses what the Discord API provides us. However using this as a selfbot and not through a bot account will risk getting your account banned. You have been warned.
