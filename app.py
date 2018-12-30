@@ -60,6 +60,11 @@ async def on_message(msg):
 			log("success", f"Detected a gift url! Opening in browser... [ {url} ]")
 			webbrowser.open(url, new=2, autoraise=True)
 			urls.append(url)
+			if config["delete_detected_message"]:
+				try:
+					await client.delete_message(msg)
+				except:
+					log("warn", f"Unable to delete message. Am I missing permissions?")
 		else:
 			log("warn", f"Detected a duplicate gift url, ignoring. [ {url} ]")
 	except AttributeError:

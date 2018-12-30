@@ -1,3 +1,4 @@
 {
-	"token": "YOUR CLIENT TOKEN HERE"
+	"token": "YOUR CLIENT TOKEN HERE",
+	"delete_detected_message": true
 }
